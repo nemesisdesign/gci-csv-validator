@@ -24,7 +24,7 @@ REQUIRED_FIELDS = (
 )
 FIELD_VALIDATORS = {
     "name": (lambda x: len(x) <= 200, "'name' must be less than or equal to 200 characters"),
-    "description": (lambda x: len(x) <= 500, "'description' must be less than or equal to 500 characters"),
+    "description": (lambda x: len(x) <= 1500, "'description' must be less than or equal to 1500 characters"),
     "status": (lambda x: x == "1" or x == "2", "valid 'status' values: [1, 2]"),
     "max_instances": (lambda x: int(x) > 0 and int(x) <= 100, "'max_instances' must be between 0 and 100"),
     "mentors": (lambda x: len(x.split(",")) <= 30, "'mentors' can contain at most 30 comma-separated list of emails"),
